@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1360">
+  <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+  <meta name="theme-color" content="#fffaf0">
+  <meta name="description" content="Page On — a little cafe for slow mornings, good coffee, and curious cats.">
+  <title>Page On</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- webfont 연결-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- font-family: "Abhaya Libre", serif; -->
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+  <link rel="preload" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
+  <!-- font-family: "Wanted Sans Variable", "Wanted Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; -->
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+</script>
+
+<body>
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Main navigation">
+      <a class="nav-event" href="#event">event</a>
+      <a class="nav-sns" href="#instagram">sns</a>
+
+      <a class="brand" href="#top" aria-label="Page On home">
+        <img src="assets/imges/layout/logo.svg" alt="Page On">
+      </a>
+
+      <a class="nav-about" href="#about">about</a>
+      <a class="nav-menu" href="#signature">menu</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top" aria-label="Page On cafe">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/imges/viedo/main_banner.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-copy">
+        <div class="about-title">
+          <img class="about-title-flower" src="assets/imges/main/flower.svg" alt="" aria-hidden="true">
+          <h2>About us</h2>
+        </div>
+
+        <p class="about-intro">
+          책과 커피가 머무는 곳,<br>
+          <strong>Page On</strong>
+        </p>
+
+        <div class="about-description">
+          <p>빠르게 흘러가는 일상 속에서 잠시 멈춰 나만의 시간을 보낼 수 있는 공간을 만들고 싶었습니다.</p>
+          <p>Page On은 책 한 권과 따뜻한 커피 한 잔, 그리고 천천히 머물 수 있는 여유를 담은 북카페입니다. 좋아하는 책을 골라 조용히 페이지를 넘기고, 창가에 앉아 커피를 마시며 잠시 쉬어갈 수
+            있습니다.</p>
+        </div>
+
+        <a class="about-button" href="about.html" aria-label="About more">
+          <img src="assets/imges/main/button1%20.svg" alt="">
+          <span class="about-button-label">about more</span>
+          <span class="about-button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="about-visual">
+        <img class="about-photo" src="assets/imges/main/content.png" alt="햇살이 드는 창가에 놓인 책과 커피">
+
+        <img class="about-sprig about-sprig-left" src="assets/imges/main/hurb1.svg" alt="" aria-hidden="true">
+        <img class="about-sprig about-sprig-right" src="assets/imges/main/hurb2.svg" alt="" aria-hidden="true">
+
+        <svg class="about-orbit" viewBox="0 0 380 380" aria-hidden="true">
+          <defs>
+            <path id="about-orbit-path" d="M 190,190 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0" />
+          </defs>
+          <g class="about-orbit-rotator">
+            <text>
+              <textPath href="#about-orbit-path" textLength="950" lengthAdjust="spacing">
+                Page On　Page On　Page On　Page On
+              </textPath>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="signature">
+    <img class="leaf leaf-left" src="assets/imges/main/leaf1.svg" alt="" aria-hidden="true">
+    <img class="leaf leaf-right" src="assets/imges/main/leaf2.svg" alt="" aria-hidden="true">
+
+    <div class="signature-title-wrap">
+      <h2 class="signature-title">
+        <img class="signature-flower signature-flower-top" src="assets/imges/main/flower.svg" alt="" aria-hidden="true">
+        <span>Our Favorite Signature</span>
+        <img class="signature-flower signature-flower-bottom" src="assets/imges/main/flower.svg" alt=""
+          aria-hidden="true">
+      </h2>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-item">
+        <img src="assets/imges/main/catcookie 1.png" alt="Cat shaped chocolate cookie">
+        <h3>Cat cookie</h3>
+      </article>
+      <article class="menu-item">
+        <img src="assets/imges/main/chocolatte1.png" alt="Warm chocolate latte">
+        <h3>Choco latte</h3>
+      </article>
+      <article class="menu-item">
+        <img src="assets/imges/main/smorecookie1.png" alt="Toasted s'more cookie">
+        <h3>Smore cookie</h3>
+      </article>
+      <article class="menu-item">
+        <img src="assets/imges/main/cappuccino1.png" alt="Cappuccino with latte art">
+        <h3>Cappuccino</h3>
+      </article>
+    </div>
+
+    <div class="signature-bottom">
+      <div class="signature-mascot">
+        <img class="signature-cat" src="assets/imges/main/cat1.svg" alt="Page On cat mascot">
+        <img class="signature-butterfly" src="assets/imges/main/butterfly.svg" alt="" aria-hidden="true">
+      </div>
+
+      <a class="signature-menu-button" href="#find-us">
+        <img src="assets/imges/main/button2%20.svg" alt="">
+        <span>more menu</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="healing" id="find-us">
+    <div class="healing-heading">
+      <h2>
+        <img class="healing-flower" src="assets/imges/main/flower.svg" alt="" aria-hidden="true">
+        <span>Healing Zone</span>
+      </h2>
+    </div>
+
+    <div class="healing-layout">
+      <div class="place-collage">
+        <img class="place-main" src="assets/imges/main/place1.png" alt="Warm cafe interior with bookshelves">
+        <img class="place-top" src="assets/imges/main/place2.png" alt="Quiet window seat in the sun">
+        <img class="place-bottom" src="assets/imges/main/place3.png" alt="Private corner table at Page On">
+        <img class="sprig" src="assets/imges/main/hurb1.svg" alt="" aria-hidden="true">
+      </div>
+
+      <aside class="find-card">
+        <h3>Find Your Place</h3>
+        <p>자연을 봐라보는 테라스부터 아늑한 실내까지, 취향에 맞는 공간을 만나보세요.</p>
+
+        <ol>
+          <li><span>01.</span> Cozy Zone</li>
+          <li style="position: relative; left: 12px;">
+            <span>02.</span> Natural View
+          </li>
+          <li style="position: relative; left: 24px;">
+            <span>03.</span> Private Room
+          </li>
+        </ol>
+
+        <div class="healing-walk">
+          <div class="healing-paws" aria-hidden="true">
+            <img class="paw paw-1" src="assets/imges/main/sole.svg" alt="">
+            <img class="paw paw-2" src="assets/imges/main/sole.svg" alt="">
+            <img class="paw paw-3" src="assets/imges/main/sole.svg" alt="">
+          </div>
+          <img class="healing-cat" src="assets/imges/main/cat_walk_cream.gif" alt="Page On cat walking">
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="guidelines section-wrap" id="guidelines">
+    <div class="guidelines-book-wrap">
+      <div class="guidelines-book">
+        <img class="guidelines-photo" src="assets/imges/main/page_on_guideline.jpg" alt="Page on Guidelines 안내 이미지">
+      </div>
+    </div>
+
+    <div class="guidelines-list">
+      <article class="guide-card">
+        <img class="guide-photo" src="assets/imges/main/cafe1.png" alt="카페 공간">
+        <img class="guide-line" src="assets/imges/main/shape.svg" alt="" aria-hidden="true">
+        <p>시간 제한 없이 이용 가능한 공간</p>
+      </article>
+
+      <article class="guide-card">
+        <img class="guide-photo" src="assets/imges/main/book.png" alt="다양한 장르의 책">
+        <img class="guide-line" src="assets/imges/main/shape.svg" alt="" aria-hidden="true">
+        <p>다양한 장르의 책들 마련</p>
+      </article>
+
+      <article class="guide-card">
+        <img class="guide-photo" src="assets/imges/main/playlist.png" alt="Page On 플레이리스트">
+        <img class="guide-line" src="assets/imges/main/shape.svg" alt="" aria-hidden="true">
+        <p>카페 분위기 음악 제공</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="events" id="event">
+    <div class="event-heading">
+      <h2>
+        Event
+        <img src="assets/imges/main/flower.svg" alt="" aria-hidden="true">
+      </h2>
+    </div>
+
+    <div class="event-grid">
+      <img class="event-cat-logo" src="assets/imges/main/symbolelogo.png" alt="Page On 고양이 심볼">
+
+      <div class="event-item">
+        <a class="event-card" href="#find-us">
+          <img src="assets/imges/main/event1.png" alt="고양이 키링 이벤트">
+          <span>고양이 키링 증정</span>
+        </a>
+      </div>
+
+      <div class="event-item">
+        <a class="event-card" href="#signature">
+          <img src="assets/imges/main/event2.png" alt="카페 오픈 기념 이벤트">
+          <span>카페 오픈 기념<br>커피 &amp; 쿠키 택 1</span>
+        </a>
+      </div>
+
+      <div class="event-item event-item-with-sprig">
+        <a class="event-card" href="#find-us">
+          <img src="assets/imges/main/event3.png" alt="포인트 이벤트">
+          <span>포인트 관련 이벤트</span>
+        </a>
+        <img class="event-sprig" src="assets/imges/main/hurb3.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+
+    <a class="event-button" href="event.html">
+      <img src="assets/imges/main/button3.svg" alt="" aria-hidden="true">
+      <span>view event</span>
+    </a>
+  </section>
+
+  <section class="brand-banner" aria-label="Page On cafe">
+    <img src="assets/imges/main/all_cafe.png" alt="Page On 카페의 책과 커피, 디저트">
+  </section>
+
+  <section class="instagram section-wrap" id="instagram">
+    <div class="section-heading">
+      <h2 class="instagram-title">
+        Instagram
+        <img src="assets/imges/main/flower.svg" alt="" aria-hidden="true">
+      </h2>
+    </div>
+
+    <div class="insta-grid">
+      <a href="#event">
+        <img src="assets/imges/main/making.png" alt="커피를 만드는 모습">
+      </a>
+      <a href="#event">
+        <img src="assets/imges/main/keyring.png" alt="Page On 고양이 키링">
+      </a>
+      <a href="#find-us">
+        <img src="assets/imges/main/mood.png" alt="Page On 카페 내부">
+      </a>
+      <a href="#signature">
+        <img src="assets/imges/main/newmenu.png" alt="Page On 음료와 디저트">
+      </a>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <section class="footer-column">
+        <h2>ADDRESS</h2>
+        <p>부산광역시 중구 중앙대로 59</p>
+        <p>010-1234-5678</p>
+      </section>
+      <section class="footer-column">
+        <h2>OPENING HOURS</h2>
+        <p>10:00 — 22:00</p>
+        <p class="footer-hours-note">연중무휴</p>
+      </section>
+      <section class="footer-column footer-social">
+        <h2>FOLLOW US</h2>
+        <a href="#instagram">Instagram <img src="assets/imges/main/ins.svg" alt=""></a>
+        <a href="#find-us"><img class="footer-naver-icon" src="assets/imges/main/nav.svg" alt=""> naver</a>
+      </section>
+    </div>
+    <p class="copyright">이용약관&nbsp; | &nbsp;개인정보처리방침&nbsp; | &nbsp;Copyright© 2026 PAGE ON. ALL RIGHTS RESERVED.</p>
+    <img class="footer-scene" src="assets/imges/main/footer.png"
+      alt="Page On cat mascot walking through a flower meadow">
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const section = document.querySelector("#find-us");
+      const collage = section?.querySelector(".place-collage");
+
+      if (!section || !collage) return;
+
+      section.classList.add("motion-ready");
+
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.remove("is-visible");
+          void collage.offsetWidth; // 애니메이션을 다시 시작하도록 초기화
+          section.classList.add("is-visible");
+        }
+      }, { threshold: 0.15 });
+
+      observer.observe(collage);
+    });
+  </script>
+</body>
+
+</html>
