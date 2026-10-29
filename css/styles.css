@@ -873,7 +873,7 @@ img {
     box-shadow: none;
 }
 
-.guidelines-photo {
+.guidelines-video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1040,25 +1040,26 @@ img {
 .event-cat-logo {
     position: absolute;
     z-index: 4;
-    bottom: 365px;
+    bottom: 359px;
     left: 41%;
     width: 211.01px;
     height: 186.99px;
     object-fit: contain;
     transform: translateX(-50%);
-    animation: event-cat-bob 1.5s ease-in-out infinite;
+    transform-origin: 50% 90%;
+    animation: event-cat-greet 2.8s ease-in-out infinite;
     pointer-events: none;
 }
 
-@keyframes event-cat-bob {
-
-    0%,
-    100% {
+@keyframes event-cat-greet {
+    0%, 100% {
         transform: translate(-50%, 0);
     }
-
+    25%, 75% {
+        transform: translate(-50%, -10px);
+    }
     50% {
-        transform: translate(-50%, -7px);
+        transform: translate(-50%, 0);
     }
 }
 
@@ -1118,11 +1119,12 @@ img {
     overflow: hidden;
 }
 
-.brand-banner img {
+.brand-banner video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 53%;
+    object-position: center;
 }
 
 .instagram.section-wrap {
@@ -1203,7 +1205,7 @@ img {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background: #b9e1eb;
+    background: #b9e1eb url("../assets/imges/main/footer_background.png") center / cover no-repeat;
 }
 
 .footer-info {
@@ -1275,19 +1277,6 @@ img {
     transform: translateX(-50%);
 }
 
-.footer-scene {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-
 @media(min-width:1200px) {
     .hero {
         height: 620px;
@@ -1321,3 +1310,13 @@ img {
     height: 147px;
     object-fit: contain;
 }
+
+/* 고양이 발바닥 커서 */
+html, body, body * {
+    cursor: url("../assets/imges/main/cursor_paw_closed_48.svg") 24 9, auto;
+}
+a, a *, button, button *, [role="button"], [role="button"] *,
+input[type="button"], input[type="submit"], .menu-item img {
+    cursor: url("../assets/imges/main/cursor_paw_open_48.svg") 24 9, pointer;
+}
+
