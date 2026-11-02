@@ -1,0 +1,1497 @@
+:root {
+    --cream: #fffaf0;
+    --ink: #29281f;
+    --green: #315c2d;
+    --lime: #dcebb7;
+    --gold: #d4b67a;
+    --serif: "Abhaya Libre", Georgia, serif;
+    --sans: "Wanted Sans Variable", "Wanted Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+/* header */
+/* 배너: 1916 × 847 비율, 원본 영상 비율 유지 */
+.hero {
+    position: relative;
+    width: min(100%, 1916px);
+    aspect-ratio: 1916 / 847;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f8f3e8;
+}
+
+.hero-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.1);
+    opacity: 0.9;
+}
+
+/* 아주 옅은 베이지 톤 */
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+/* 헤더: 기준 화면 1803 × 80 */
+.site-header {
+    position: absolute;
+    z-index: 10;
+    top: 17px;
+    left: 50%;
+    width: min(1803px, calc(100% - 113px));
+    height: 80px;
+    transform: translateX(-50%);
+}
+
+.nav-pill {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    background: rgba(255, 250, 240, 0.38);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 18px rgba(97, 72, 44, 0.664);
+}
+
+/* 메뉴 글자: 20px, 이미지처럼 좌우 두 개씩 */
+.nav-pill>a:not(.brand) {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #111;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-pill>a:not(.brand):hover,
+.nav-pill>a:not(.brand):focus-visible {
+    color: #1D5300;
+}
+
+.nav-event {
+    left: 20.5%;
+}
+
+.nav-sns {
+    left: 27%;
+}
+
+.nav-about {
+    left: 73%;
+}
+
+.nav-menu {
+    left: 79.5%;
+}
+
+/* 로고: 194 × 168, 가로세로 비율 유지하며 헤더 중앙에 배치 */
+.brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 194px;
+    height: 168px;
+    transform: translate(-50%, calc(-50% + 10px));
+}
+
+.brand img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* header */
+
+
+/* content 1 */
+.section-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 6vw;
+    padding-right: 6vw
+}
+
+.about-section {
+    width: 100%;
+    height: 782px;
+    overflow: hidden;
+    background: #fffaf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-inner {
+    width: 1072px;
+    display: grid;
+    grid-template-columns: 320px 592px;
+    column-gap: 160px;
+    align-items: center;
+}
+
+.about-copy {
+    position: relative;
+    height: 488px;
+    padding-top: 30px;
+}
+
+.about-title {
+    position: relative;
+}
+
+.about-title h2 {
+    margin: 0;
+    color: #285b19;
+    font: 800 32px/1.2 var(--serif);
+}
+
+.about-title-flower {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: -12px;
+    top: -14px;
+    object-fit: contain;
+}
+
+.about-intro {
+    margin: 54px 0 0;
+    color: #171717;
+    font-size: 20px;
+    line-height: 1.55;
+}
+
+.about-intro strong {
+    color: #285b19;
+    font-family: var(--serif);
+    font-weight: 800;
+}
+
+.about-description {
+    margin-top: 56px;
+    max-width: 285px;
+    color: #222;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.about-description p {
+    margin: 0 0 12px;
+}
+
+.about-button {
+    position: relative;
+    display: block;
+    width: 152px;
+    height: 48px;
+    margin: 84px 0 0 48px;
+}
+
+.about-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-button-label {
+    position: absolute;
+    top: 45%;
+    left: 22px;
+    transform: translateY(-50%);
+    color: #583E24;
+    font: 800 18px var(--serif);
+}
+
+
+
+.about-visual {
+    position: relative;
+    width: 592px;
+    height: 488px;
+}
+
+.about-photo {
+    display: block;
+    width: 592px;
+    height: 488px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.about-sprig {
+    position: absolute;
+    z-index: 1;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.about-sprig-left {
+    width: 64px;
+    height: 112px;
+    left: -70px;
+    bottom: 8px;
+}
+
+.about-sprig-right {
+    width: 54px;
+    height: 90px;
+    right: -34px;
+    bottom: 86px;
+}
+
+.about-orbit {
+    position: absolute;
+    z-index: 1;
+    width: 380px;
+    height: 380px;
+    left: 520px;
+    top: 450px;
+    /* 기존 400px에서 위로 이동 */
+    overflow: visible;
+    pointer-events: none;
+}
+
+.about-orbit text {
+    fill: #ffebae;
+    font: 400 44px/1 Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.about-orbit-rotator {
+    transform-origin: 190px 190px;
+    animation: about-orbit-spin 32s linear infinite;
+}
+
+@keyframes about-orbit-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    .about-orbit-rotator {
+        animation: none;
+    }
+}
+/* content 1 */
+
+/* content 2 */
+.signature {
+    position: relative;
+    width: 100%;
+    height: 782px;
+    min-height: 782px;
+    padding: 0;
+    background: var(--lime);
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    /* 추가 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모서리 잎 장식 */
+.signature .leaf {
+    position: absolute;
+    z-index: 0;
+    width: 420px;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.signature .leaf-left {
+    top: -45px;
+    left: -10px;
+}
+
+.signature .leaf-right {
+    right: -22px;
+    bottom: -30px;
+    transform: rotate(180deg);
+}
+
+/* 제목과 회전 꽃 */
+.signature-title-wrap {
+
+    text-align: center;
+
+}
+
+.signature-title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: #285b19;
+    font: 800 32px/1.25 var(--serif);
+    letter-spacing: 2px;
+}
+
+.signature-flower {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    animation: signature-flower-spin 9s linear infinite;
+}
+
+.signature-flower-top {
+    top: -12px;
+    left: -23px;
+}
+
+.signature-flower-bottom {
+    right: -25px;
+    bottom: -10px;
+    animation-direction: reverse;
+}
+
+@keyframes signature-flower-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 기존 음식 이미지는 그대로, 시안처럼 넓게 배치 */
+.menu-grid {
+
+    /* 추가 */
+    width: 100%;
+    max-width: 1320px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 추가 */
+    width: calc(100% / 4);
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+}
+
+.menu-item img {
+    display: block;
+    flex: none;
+    width: 240px;
+    height: 180px;
+
+    max-width: 100%;
+    object-fit: contain;
+    /* 추가 */
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.menu-item h3 {
+    width: auto;
+    margin: 0;
+    color: #583e24;
+    font: 800 20px var(--serif);
+    text-align: center;
+    text-transform: lowercase;
+    /* 추가 */
+    white-space: nowrap;
+}
+
+
+/* 아래쪽 고양이, 나비, 버튼 */
+/* 버튼을 섹션 가운데에 배치 */
+.signature-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+}
+
+.signature-mascot {
+    position: absolute;
+    left: calc(50% - 273.5px);
+    bottom: 0;
+    width: 287px;
+    height: 191px;
+    overflow: visible;
+}
+
+.signature-cat {
+    position: absolute;
+    left: -75px;
+    bottom: -29px;
+    width: 287px;
+    height: 191px;
+    object-fit: contain;
+}
+
+.signature-butterfly {
+    position: absolute;
+    top: 34px;
+    left: 78px;
+    right: auto;
+    width: 105px;
+    height: 105px;
+    animation: signature-butterfly-fly 3s ease-in-out infinite;
+}
+
+/* 오른쪽 잎 방향 수정 */
+.signature .leaf-right {
+    transform: none;
+}
+
+/* 음식 이미지 좌우 호버 움직임 복구 */
+.menu-item img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-item:hover img {
+    animation: signature-food-u-sway 1.8s ease-in-out infinite;
+}
+
+
+@keyframes signature-food-u-sway {
+    0% {
+        transform: translate(-7px, -7px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(0, 2px) rotate(0);
+    }
+
+    100% {
+        transform: translate(7px, -7px) rotate(2deg);
+    }
+}
+
+.signature-menu-button {
+    position: absolute;
+    left: 50%;
+    bottom: 68px;
+    width: 152px;
+    height: 48px;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.signature-menu-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.signature-menu-button span {
+    position: absolute;
+    top: 44%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #583e24;
+    font: 800 19px var(--serif);
+}
+
+@keyframes signature-cat-bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes signature-butterfly-fly {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translate(14px, -12px) rotate(12deg);
+    }
+}
+/* content 2 */
+
+/* content 3 */
+/* Healing Zone: 기준 화면 1914 × 782 */
+.healing {
+    box-sizing: border-box;
+    width: min(100%, 1914px);
+    height: 782px;
+    margin: 0 auto;
+    padding: 120px 0 0;
+    overflow: hidden;
+    background: #FFFBEE;
+}
+
+.healing-heading,
+.healing-layout {
+    width: min(1397px, 90vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.healing-heading {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.healing-heading h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: #654e3b;
+    font: 800 32px/1.2 var(--serif);
+    letter-spacing: 0.08em;
+}
+
+.healing-flower {
+    position: absolute;
+    top: -13px;
+    left: -23px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.healing-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 955px) 300px;
+    gap: 142px;
+    align-items: center;
+}
+
+.place-collage {
+    position: relative;
+    height: 520px;
+}
+
+.place-collage>img {
+    position: absolute;
+    display: block;
+    border-radius: 3px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px #4f402422;
+}
+
+.place-main {
+    top: 4%;
+    left: 0;
+    width: 59%;
+    height: 89%;
+}
+
+.place-top {
+    top: 0;
+    right: 0;
+    width: 31%;
+    height: 47%;
+}
+
+.place-bottom {
+    right: 0;
+    bottom: 0;
+    width: 31%;
+    height: 47%;
+}
+
+.place-collage>.sprig {
+    left: -10%;
+    bottom: 6%;
+    width: 64px;
+    height: 138px;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.find-card {
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+    text-align: left;
+}
+
+.find-card .eyebrow {
+    margin: 0 0 12px;
+    font-size: 12px;
+}
+
+.find-card h3 {
+    margin: 0;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #583e24;
+    color: var(--green);
+    font: 800 22px/1.3 var(--serif);
+    letter-spacing: 0.08em;
+}
+
+.find-card>p:not(.eyebrow) {
+    margin: 36px 0 0;
+    color: #716d5d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.find-card ol {
+    margin: 48px 0 52px;
+    padding-left: 50px;
+    list-style: none;
+    color: #583e24;
+    font: 800 16px/2.4 var(--serif);
+    letter-spacing: 0.08em;
+    text-align: left;
+}
+
+.find-card ol span {
+    color: #583e24;
+}
+
+.healing-walk {
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin-left: auto;
+}
+
+.healing-cat {
+    position: absolute;
+    right: 54px;
+    bottom: 7px;
+    z-index: 2;
+    width: 250px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.healing-paws {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.healing-paws .paw {
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    object-fit: contain;
+    opacity: 0;
+    animation: healing-paw-step 4.12s ease-in-out infinite;
+}
+
+.healing-paws .paw-1 {
+    left: 10px;
+    bottom: 5px;
+}
+
+.healing-paws .paw-2 {
+    left: 43px;
+    bottom: 23px;
+    animation-delay: 1.03s;
+}
+
+.healing-paws .paw-3 {
+    left: 76px;
+    bottom: 13px;
+    animation-delay: 2.06s;
+}
+
+.healing-paws .paw-4 {
+    left: 109px;
+    bottom: 34px;
+    animation-delay: 3.09s;
+}
+
+@keyframes healing-paw-step {
+
+    0%,
+    24%,
+    100% {
+        opacity: 0;
+    }
+
+    8%,
+    16% {
+        opacity: 0.8;
+    }
+}
+
+.healing.motion-ready .place-main,
+.healing.motion-ready .place-top,
+.healing.motion-ready .place-bottom {
+    opacity: 0;
+}
+
+
+.healing.is-visible .place-main {
+    animation: healing-photo-in 1s ease-out 0s both;
+}
+
+.healing.is-visible .place-top {
+    animation: healing-photo-in 1s ease-out 1.1s both;
+}
+
+.healing.is-visible .place-bottom {
+    animation: healing-photo-in 1s ease-out 2.2s both;
+}
+
+@keyframes healing-photo-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes healing-paw-step {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    15%,
+    35% {
+        opacity: 0.8;
+    }
+
+    55% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .healing-cat,
+    .healing-paws .paw,
+    .healing.is-visible .place-main,
+    .healing.is-visible .place-top,
+    .healing.is-visible .place-bottom {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+/* content 3 */
+
+/* content 4 */
+.guidelines {
+    display: grid;
+    grid-template-columns: 600px 388px;
+    column-gap: 238px;
+    align-items: stretch;
+    width: min(1394px, calc(100% - 40px));
+    max-width: none;
+    padding: 55px 0 75px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.guidelines-book-wrap {
+    display: block;
+    position: relative;
+    align-self: stretch;
+}
+
+.guidelines-book {
+    position: sticky;
+    top: 32px;
+    width: 600px;
+    height: 895px;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: none;
+}
+
+.guidelines-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.guidelines-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.guide-card {
+    position: relative;
+    width: 388px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.guide-card .guide-photo {
+    display: block;
+    width: 388px;
+    height: 341px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: -14px 8px 22px rgba(55, 43, 25, 0.22);
+}
+
+.guide-card p {
+    margin: 14px 0 0;
+    color: #111;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+
+/* 카드 오른쪽에 붙는 줄과 뚫린 원형 부분 */
+.guide-card .guide-line {
+    position: absolute;
+    z-index: 3;
+    top: 151px;
+    right: -58px;
+    width: 90.55px;
+    height: 18.69px;
+    object-fit: fill;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.guide-card::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 160.5px;
+    right: 7px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--cream);
+    transform: translateY(-50%);
+}
+
+.guide-card::after {
+    content: none;
+}
+/* content 4 */
+
+/* content 5 */
+/* Event 영역: 기준 화면 1914 × 864 */
+.events {
+    position: relative;
+    min-height: 864px;
+    box-sizing: border-box;
+    padding: 48px 0 50px;
+    background: #FFFBEE;
+    text-align: center;
+    overflow: hidden;
+}
+
+.event-heading {
+    margin: 0 0 64px;
+}
+
+.event-heading h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: #6b5440;
+    font: 800 32px/1.2 var(--serif);
+}
+
+.event-heading h2 img {
+    position: absolute;
+    top: -14px;
+    right: -29px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.event-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: min(6.48vw, 124px);
+    width: min(1596px, 84vw);
+    margin: 0 auto;
+}
+
+.event-item {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    aspect-ratio: 449 / 422;
+}
+
+.event-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 16px 32px rgba(58, 33, 8, 0.32),
+        0 4px 12px rgba(88, 62, 36, 0.18);
+}
+
+.event-card>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-card>span {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.58);
+    color: #fff;
+    font: 600 16px/1.6;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.event-card:hover>span,
+.event-card:focus-visible>span {
+    opacity: 1;
+}
+
+.event-card:focus-visible {
+    outline: 3px solid #87945d;
+    outline-offset: 4px;
+}
+
+/* 가운데 카드 위 고양이 심볼 */
+.event-cat-logo {
+    position: absolute;
+    z-index: 4;
+    bottom: 359px;
+    left: 41%;
+    width: 211.01px;
+    height: 186.99px;
+    object-fit: contain;
+    transform: translateX(-50%);
+    transform-origin: 50% 90%;
+    animation: event-cat-greet 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes event-cat-greet {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    25%,
+    75% {
+        transform: translate(-50%, -10px);
+    }
+
+    50% {
+        transform: translate(-50%, 0);
+    }
+}
+
+/* 오른쪽 카드 옆 장식 */
+.event-item-with-sprig {
+    z-index: 2;
+}
+
+.event-sprig {
+    position: absolute;
+    z-index: 3;
+    right: -160px;
+    top: 209px;
+    width: 263.38px;
+    height: 193.28px;
+    object-fit: contain;
+    pointer-events: none;
+    transform: rotate(-12deg);
+    transform-origin: center;
+}
+
+/* 직접 만든 버튼 이미지와 문구 */
+.event-button {
+    position: relative;
+    display: block;
+    width: 133px;
+    height: 38px;
+    margin: 78px auto 0;
+}
+
+.event-button>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.event-button>span {
+    position: absolute;
+    top: 47%;
+    left: 43%;
+    color: #583e24;
+    font: 800 17px var(--serif);
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+/* content 5 */
+
+/* content 6 */
+.brand-banner {
+    width: min(100%, 1919px);
+    aspect-ratio: 1919 / 864;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.brand-banner video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* content 6 */
+
+/* content 7 */
+.instagram.section-wrap {
+    width: 100%;
+    max-width: 1920px;
+    min-height: 782px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 137px 0 40px;
+}
+
+.instagram .section-heading {
+    margin: 0 0 104px;
+    text-align: center;
+}
+
+.instagram-title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: var(--green);
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.instagram-title img {
+    position: absolute;
+    top: -15px;
+    left: -22px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: min(60px, 3.125vw);
+    width: min(1600px, 92vw);
+    margin: 0 auto;
+}
+
+.insta-grid a {
+    display: block;
+    aspect-ratio: 355 / 312;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: -12px 14px 24px -8px rgba(160, 88, 16, 0.842);
+}
+
+.insta-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.insta-grid a:hover img {
+    transform: scale(1.06);
+}
+
+
+
+.insta-grid a:hover img {
+    transform: scale(1.05);
+}
+/* content 7 */
+
+/* footer */
+.site-footer {
+    position: relative;
+    box-sizing: border-box;
+    width: min(100%, 1920px);
+    height: auto;
+    aspect-ratio: 1920 / 839;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background: url("../assets/imges/main/footer_background.png") center / cover no-repeat;
+}
+
+
+.footer-info {
+    position: absolute;
+    z-index: 1;
+    top: 16.45%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 265px 296px 1fr;
+    width: min(1210px, calc(100% - 48px));
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.footer-column h2 {
+    margin: 0 0 14px;
+    color: #111;
+    font: 800 18px var(--serif);
+}
+
+.footer-column p,
+.footer-social a {
+    color: #111;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.footer-column p {
+    margin: 0;
+}
+
+.footer-social a {
+    display: grid;
+    grid-template-columns: 70px 21px;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-social img {
+    display: inline-block;
+    width: 21px;
+    height: 22px;
+    flex: 0 0 21px;
+    object-fit: contain;
+}
+
+.footer-social a:has(.footer-naver-icon) {
+    margin-left: 0;
+}
+
+.footer-social .footer-naver-icon {
+    transform: scale(1.8);
+    transform-origin: center;
+}
+
+.footer-column .footer-hours-note {
+    margin-left: 0em;
+}
+
+.copyright {
+    position: absolute;
+    z-index: 1;
+    top: 35.75%;
+    left: 50%;
+    width: min(1210px, calc(100% - 48px));
+    margin: 0;
+    color: #111;
+    font-size: 14px;
+    transform: translateX(-50%);
+}
+/* footer */
+
+
+@media(min-width:1200px) {
+    .hero {
+        height: 620px;
+    }
+
+    .signature {
+        padding-left: max(7vw, calc((100vw - 1120px)/2));
+        padding-right: max(7vw, calc((100vw - 1120px)/2));
+    }
+}
+
+
+
+
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *,
+    *:before,
+    *:after {
+        transition: none !important
+    }
+}
+
+/* 힐링 존 02. 및 03 오른쪽 이동 */
+.place-collage .sprig {
+    width: 95px;
+    height: 147px;
+    object-fit: contain;
+}
+
+/* Flower cursor matching the existing decorative flower. */
+html,
+body,
+body * {
+    cursor: var(--page-cursor, auto);
+}
+
+a,
+a *,
+button,
+button *,
+[role="button"],
+[role="button"] *,
+input[type="button"],
+input[type="submit"],
+.menu-item img {
+    cursor: var(--action-cursor, pointer);
+}
+
+
+
+
+
+/* Responsive: shared header/footer and main page. Tablet <= 1199px. */
+@media (max-width: 1199px) {
+    body { overflow-x: clip; }
+    .site-header { top: 12px; width: calc(100% - 32px); height: 64px; }
+    .nav-pill { display: grid; grid-template-columns: 1fr 1fr 140px 1fr 1fr; align-items: center; padding: 0 18px; }
+    .nav-pill > a:not(.brand) { position: static; transform: none; text-align: center; font-size: 17px; padding: 18px 4px; }
+    .brand { position: static; width: 140px; height: 64px; transform: none; }
+    .hero { height: auto; min-height: 340px; aspect-ratio: 1916 / 847; }
+    .about-section { height: auto; padding: 80px 32px; }
+    .about-inner { width: 100%; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; }
+    .about-copy { height: auto; padding-top: 0; }
+    .about-intro { margin-top: 28px; }
+    .about-description { margin-top: 28px; max-width: none; font-size: 15px; line-height: 1.7; }
+    .about-button { margin: 28px 0 0; }
+    .about-visual { width: 100%; height: auto; aspect-ratio: 592 / 488; }
+    .about-photo { width: 100%; height: 100%; }
+    .about-orbit { width: 200px; height: 200px; left: auto; right: -50px; top: auto; bottom: -90px; }
+    .about-sprig-left { left: -30px; width: 42px; }
+    .about-sprig-right { right: -22px; width: 40px; }
+    .signature { height: auto; min-height: 620px; padding: 70px 32px 170px; }
+    .signature .leaf { width: 240px; }
+    .menu-grid { gap: 16px; margin-top: 50px; }
+    .menu-item { width: auto; flex: 1; min-width: 0; }
+    .menu-item img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+    .menu-item h3 { font-size: 18px; white-space: normal; }
+    .signature-mascot { left: calc(50% - 230px); }
+    .healing { height: auto; padding: 80px 32px 50px; }
+    .healing-heading, .healing-layout { width: 100%; }
+    .healing-layout { grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; }
+    .place-collage { height: 420px; }
+    .find-card { width: 100%; max-width: none; }
+    .find-card ol { padding-left: 10px; margin: 28px 0; }
+    .guidelines { width: calc(100% - 64px); grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; padding: 50px 0 70px; }
+    .guidelines-book { top: 24px; width: 100%; height: auto; aspect-ratio: 600 / 895; }
+    .guidelines-list { gap: 40px; }
+    .guide-card, .guide-card .guide-photo { width: 100%; }
+    .guide-card .guide-photo { height: auto; aspect-ratio: 388 / 341; }
+    .guide-card .guide-line { top: 45%; right: -24px; width: 56px; }
+    .guide-card::before { top: 45%; width: 18px; height: 18px; }
+    .events { min-height: 0; padding: 70px 32px; }
+    .event-heading { margin-bottom: 105px; }
+    .event-grid { width: 100%; gap: 28px; }
+    .event-cat-logo { bottom: calc(100% - 12px); left: 50%; width: 145px; height: 128px; }
+    .event-sprig { width: 130px; height: 110px; right: -45px; top: auto; bottom: 0; }
+    .event-button { margin-top: 48px; }
+    .instagram.section-wrap { min-height: 0; padding: 80px 32px; }
+    .instagram .section-heading { margin-bottom: 48px; }
+    .insta-grid { width: 100%; gap: 24px; }
+    .insta-grid a { border-radius: 24px; }
+    .site-footer { aspect-ratio: auto; min-height: 650px; padding: 64px 32px 280px; background-position: center bottom; }
+    .footer-info { position: relative; top: auto; left: auto; transform: none; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .copyright { position: relative; top: auto; left: auto; transform: none; width: 100%; margin-top: 64px; font-size: 12px; line-height: 1.8; }
+    
+}
+
+/* Mobile <= 600px. */
+@media (max-width: 600px) {
+    html { scroll-padding-top: 72px; }
+    .site-header { top: 10px; width: calc(100% - 20px); height: 54px; }
+    .nav-pill { grid-template-columns: 1fr 1fr 96px 1fr 1fr; padding: 0 8px; }
+    .nav-pill > a:not(.brand) { font-size: 12px; padding: 17px 2px; }
+    .brand { width: 96px; height: 54px; }
+    .hero { min-height: 280px; aspect-ratio: 4 / 3; }
+    .about-section { padding: 60px 24px; }
+    .about-inner { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+    .about-title h2, .healing-heading h2, .event-heading h2, .instagram-title { font-size: 28px; }
+    .about-intro { font-size: 19px; }
+    .about-orbit { display: none; }
+    .about-visual { max-width: 520px; margin: 0 auto; }
+    .signature { padding: 64px 24px 155px; }
+    .signature-title { font-size: clamp(22px, 5.8vw, 30px); letter-spacing: 0; }
+    .signature-flower { width: 18px; height: 18px; }
+    .signature-flower-top { left: -16px; }
+    .signature-flower-bottom { right: -16px; }
+    .signature .leaf { width: 160px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 16px; margin-top: 36px; }
+    .menu-item { gap: 10px; }
+    .menu-item h3 { font-size: 17px; }
+    .signature-mascot { left: calc(50% - 150px); width: 150px; height: 110px; }
+    .signature-cat { left: -25px; bottom: -10px; width: 150px; height: 110px; }
+    .signature-butterfly { left: 60px; top: 0; width: 48px; height: 48px; }
+    .signature-menu-button { left: calc(50% + 50px); bottom: 40px; }
+    .healing { padding: 64px 24px 30px; }
+    .healing-heading { margin-bottom: 30px; }
+    .healing-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .place-collage { height: auto; aspect-ratio: 1.3; }
+    .place-main { width: 64%; }
+    .place-top, .place-bottom { width: 32%; }
+    .place-collage > .sprig { left: -20px; width: 45px; height: 90px; }
+    .find-card h3 { padding-bottom: 16px; }
+    .find-card > p:not(.eyebrow) { margin-top: 20px; }
+    .find-card ol { padding-left: 16px; }
+    .healing-cat { right: 0; }
+    .guidelines { width: calc(100% - 48px); grid-template-columns: minmax(0, 1fr); gap: 36px; padding: 36px 0 64px; }
+    .guidelines-book-wrap { max-width: 480px; width: 100%; margin: auto; }
+    .guidelines-book { position: relative; top: auto; border-radius: 20px; }
+    .guidelines-list { gap: 36px; }
+    .guide-card { max-width: 480px; }
+    .guide-card .guide-line { right: -14px; width: 44px; }
+    .events { padding: 60px 24px; }
+    .event-heading { margin-bottom: 45px; }
+    .event-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; max-width: 420px; }
+    .event-cat-logo { left: auto; right: -12px; bottom: calc(100% - 16px); width: 90px; height: 80px; }
+    .event-card > span { opacity: 1; inset: auto 0 0; min-height: 64px; padding: 12px; background: rgba(0, 0, 0, 0.6); font-size: 14px; }
+    .event-sprig { width: 100px; height: 90px; right: -30px; }
+    .event-button { margin-top: 36px; }
+    .instagram.section-wrap { padding: 60px 24px; }
+    .instagram .section-heading { margin-bottom: 32px; }
+    .insta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+    .insta-grid a { border-radius: 22px; }
+    .site-footer { min-height: 700px; padding: 48px 24px 250px; }
+    .footer-info { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+    .footer-social { grid-column: 1 / -1; }
+    .footer-column h2 { font-size: 16px; }
+    .footer-column p { font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+    .copyright { margin-top: 30px; font-size: 11px; }
+    
+}
+
+/* 마우스 커서 효과들 */
+/* Shared firefly and spark cursor effect. */
+.firefly{position:fixed;top:0;left:0;width:100px;height:100px;border-radius:50%;pointer-events:none;z-index:9999;opacity:0;transform:translate3d(-200px,-200px,0);background:radial-gradient(circle,rgba(245,255,210,.95) 0%,rgba(188,255,116,.85) 5%,rgba(145,245,105,.45) 19%,rgba(126,218,93,.16) 43%,transparent 72%);filter:blur(3px);mix-blend-mode:screen;will-change:transform}
+.spark{position:fixed;left:0;top:0;width:4px;height:4px;pointer-events:none;z-index:9998;border-radius:50%;background:#d9ff9a;box-shadow:0 0 9px 3px rgba(166,255,105,.65);animation:spark-fade .9s ease-out forwards}
+@keyframes spark-fade{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.firefly,.spark{display:none}}
+
+/* Full footer scene video: crop only the encoded top/bottom black bars. */
+.site-footer { isolation: isolate; }
+.site-footer > .footer-cat {
+    position: absolute;
+    z-index: 0;
+    top: -14.45%;
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    height: 128.9%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    animation: none;
+    transform: none;
+    will-change: auto;
+}
+@media (max-width: 600px) {
+    .site-footer > .footer-cat { object-position: 70% center; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :root {
+        --page-cursor: url("../assets/imges/main/cursor-flower.svg?v=original3") 12 12, auto;
+        --action-cursor: url("../assets/imges/main/cursor-flower-hover.svg?v=outline4") 12 12, pointer;
+    }
+}
