@@ -136,14 +136,10 @@ img {
     height: 100%;
     object-fit: contain;
 }
-
-/* 작은 화면 */
-
-
 /* header */
 
 
-/* contents */
+/* content 1 */
 .section-wrap {
     max-width: 1120px;
     margin: 0 auto;
@@ -151,7 +147,6 @@ img {
     padding-right: 6vw
 }
 
-/* content 1 */
 .about-section {
     width: 100%;
     height: 782px;
@@ -317,7 +312,7 @@ img {
         animation: none;
     }
 }
-
+/* content 1 */
 
 /* content 2 */
 .signature {
@@ -565,12 +560,7 @@ img {
         transform: translate(14px, -12px) rotate(12deg);
     }
 }
-
-
-
-
-
-
+/* content 2 */
 
 /* content 3 */
 /* Healing Zone: 기준 화면 1914 × 782 */
@@ -840,7 +830,7 @@ img {
         opacity: 1 !important;
     }
 }
-
+/* content 3 */
 
 /* content 4 */
 .guidelines {
@@ -945,7 +935,9 @@ img {
 .guide-card::after {
     content: none;
 }
+/* content 4 */
 
+/* content 5 */
 /* Event 영역: 기준 화면 1914 × 864 */
 .events {
     position: relative;
@@ -1052,12 +1044,17 @@ img {
 }
 
 @keyframes event-cat-greet {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, 0);
     }
-    25%, 75% {
+
+    25%,
+    75% {
         transform: translate(-50%, -10px);
     }
+
     50% {
         transform: translate(-50%, 0);
     }
@@ -1106,12 +1103,9 @@ img {
     white-space: nowrap;
     transform: translate(-50%, -50%);
 }
+/* content 5 */
 
-/* 작은 화면 */
-
-
-
-
+/* content 6 */
 .brand-banner {
     width: min(100%, 1919px);
     aspect-ratio: 1919 / 864;
@@ -1126,7 +1120,9 @@ img {
     object-fit: cover;
     object-position: center;
 }
+/* content 6 */
 
+/* content 7 */
 .instagram.section-wrap {
     width: 100%;
     max-width: 1920px;
@@ -1194,7 +1190,9 @@ img {
 .insta-grid a:hover img {
     transform: scale(1.05);
 }
+/* content 7 */
 
+/* footer */
 .site-footer {
     position: relative;
     box-sizing: border-box;
@@ -1205,8 +1203,9 @@ img {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background: #b9e1eb url("../assets/imges/main/footer_background.png") center / cover no-repeat;
+    background: url("../assets/imges/main/footer_background.png") center / cover no-repeat;
 }
+
 
 .footer-info {
     position: absolute;
@@ -1238,7 +1237,8 @@ img {
 }
 
 .footer-social a {
-    display: flex;
+    display: grid;
+    grid-template-columns: 70px 21px;
     align-items: center;
     gap: 8px;
     width: max-content;
@@ -1256,13 +1256,17 @@ img {
     object-fit: contain;
 }
 
+.footer-social a:has(.footer-naver-icon) {
+    margin-left: 0;
+}
+
 .footer-social .footer-naver-icon {
     transform: scale(1.8);
     transform-origin: center;
 }
 
 .footer-column .footer-hours-note {
-    margin-left: 1em;
+    margin-left: 0em;
 }
 
 .copyright {
@@ -1276,6 +1280,8 @@ img {
     font-size: 14px;
     transform: translateX(-50%);
 }
+/* footer */
+
 
 @media(min-width:1200px) {
     .hero {
@@ -1311,12 +1317,181 @@ img {
     object-fit: contain;
 }
 
-/* 고양이 발바닥 커서 */
-html, body, body * {
-    cursor: url("../assets/imges/main/cursor_paw_closed_48.svg") 24 9, auto;
-}
-a, a *, button, button *, [role="button"], [role="button"] *,
-input[type="button"], input[type="submit"], .menu-item img {
-    cursor: url("../assets/imges/main/cursor_paw_open_48.svg") 24 9, pointer;
+/* Flower cursor matching the existing decorative flower. */
+html,
+body,
+body * {
+    cursor: var(--page-cursor, auto);
 }
 
+a,
+a *,
+button,
+button *,
+[role="button"],
+[role="button"] *,
+input[type="button"],
+input[type="submit"],
+.menu-item img {
+    cursor: var(--action-cursor, pointer);
+}
+
+
+
+
+
+/* Responsive: shared header/footer and main page. Tablet <= 1199px. */
+@media (max-width: 1199px) {
+    body { overflow-x: clip; }
+    .site-header { top: 12px; width: calc(100% - 32px); height: 64px; }
+    .nav-pill { display: grid; grid-template-columns: 1fr 1fr 140px 1fr 1fr; align-items: center; padding: 0 18px; }
+    .nav-pill > a:not(.brand) { position: static; transform: none; text-align: center; font-size: 17px; padding: 18px 4px; }
+    .brand { position: static; width: 140px; height: 64px; transform: none; }
+    .hero { height: auto; min-height: 340px; aspect-ratio: 1916 / 847; }
+    .about-section { height: auto; padding: 80px 32px; }
+    .about-inner { width: 100%; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; }
+    .about-copy { height: auto; padding-top: 0; }
+    .about-intro { margin-top: 28px; }
+    .about-description { margin-top: 28px; max-width: none; font-size: 15px; line-height: 1.7; }
+    .about-button { margin: 28px 0 0; }
+    .about-visual { width: 100%; height: auto; aspect-ratio: 592 / 488; }
+    .about-photo { width: 100%; height: 100%; }
+    .about-orbit { width: 200px; height: 200px; left: auto; right: -50px; top: auto; bottom: -90px; }
+    .about-sprig-left { left: -30px; width: 42px; }
+    .about-sprig-right { right: -22px; width: 40px; }
+    .signature { height: auto; min-height: 620px; padding: 70px 32px 170px; }
+    .signature .leaf { width: 240px; }
+    .menu-grid { gap: 16px; margin-top: 50px; }
+    .menu-item { width: auto; flex: 1; min-width: 0; }
+    .menu-item img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+    .menu-item h3 { font-size: 18px; white-space: normal; }
+    .signature-mascot { left: calc(50% - 230px); }
+    .healing { height: auto; padding: 80px 32px 50px; }
+    .healing-heading, .healing-layout { width: 100%; }
+    .healing-layout { grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; }
+    .place-collage { height: 420px; }
+    .find-card { width: 100%; max-width: none; }
+    .find-card ol { padding-left: 10px; margin: 28px 0; }
+    .guidelines { width: calc(100% - 64px); grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; padding: 50px 0 70px; }
+    .guidelines-book { top: 24px; width: 100%; height: auto; aspect-ratio: 600 / 895; }
+    .guidelines-list { gap: 40px; }
+    .guide-card, .guide-card .guide-photo { width: 100%; }
+    .guide-card .guide-photo { height: auto; aspect-ratio: 388 / 341; }
+    .guide-card .guide-line { top: 45%; right: -24px; width: 56px; }
+    .guide-card::before { top: 45%; width: 18px; height: 18px; }
+    .events { min-height: 0; padding: 70px 32px; }
+    .event-heading { margin-bottom: 105px; }
+    .event-grid { width: 100%; gap: 28px; }
+    .event-cat-logo { bottom: calc(100% - 12px); left: 50%; width: 145px; height: 128px; }
+    .event-sprig { width: 130px; height: 110px; right: -45px; top: auto; bottom: 0; }
+    .event-button { margin-top: 48px; }
+    .instagram.section-wrap { min-height: 0; padding: 80px 32px; }
+    .instagram .section-heading { margin-bottom: 48px; }
+    .insta-grid { width: 100%; gap: 24px; }
+    .insta-grid a { border-radius: 24px; }
+    .site-footer { aspect-ratio: auto; min-height: 650px; padding: 64px 32px 280px; background-position: center bottom; }
+    .footer-info { position: relative; top: auto; left: auto; transform: none; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .copyright { position: relative; top: auto; left: auto; transform: none; width: 100%; margin-top: 64px; font-size: 12px; line-height: 1.8; }
+    
+}
+
+/* Mobile <= 600px. */
+@media (max-width: 600px) {
+    html { scroll-padding-top: 72px; }
+    .site-header { top: 10px; width: calc(100% - 20px); height: 54px; }
+    .nav-pill { grid-template-columns: 1fr 1fr 96px 1fr 1fr; padding: 0 8px; }
+    .nav-pill > a:not(.brand) { font-size: 12px; padding: 17px 2px; }
+    .brand { width: 96px; height: 54px; }
+    .hero { min-height: 280px; aspect-ratio: 4 / 3; }
+    .about-section { padding: 60px 24px; }
+    .about-inner { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+    .about-title h2, .healing-heading h2, .event-heading h2, .instagram-title { font-size: 28px; }
+    .about-intro { font-size: 19px; }
+    .about-orbit { display: none; }
+    .about-visual { max-width: 520px; margin: 0 auto; }
+    .signature { padding: 64px 24px 155px; }
+    .signature-title { font-size: clamp(22px, 5.8vw, 30px); letter-spacing: 0; }
+    .signature-flower { width: 18px; height: 18px; }
+    .signature-flower-top { left: -16px; }
+    .signature-flower-bottom { right: -16px; }
+    .signature .leaf { width: 160px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 16px; margin-top: 36px; }
+    .menu-item { gap: 10px; }
+    .menu-item h3 { font-size: 17px; }
+    .signature-mascot { left: calc(50% - 150px); width: 150px; height: 110px; }
+    .signature-cat { left: -25px; bottom: -10px; width: 150px; height: 110px; }
+    .signature-butterfly { left: 60px; top: 0; width: 48px; height: 48px; }
+    .signature-menu-button { left: calc(50% + 50px); bottom: 40px; }
+    .healing { padding: 64px 24px 30px; }
+    .healing-heading { margin-bottom: 30px; }
+    .healing-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .place-collage { height: auto; aspect-ratio: 1.3; }
+    .place-main { width: 64%; }
+    .place-top, .place-bottom { width: 32%; }
+    .place-collage > .sprig { left: -20px; width: 45px; height: 90px; }
+    .find-card h3 { padding-bottom: 16px; }
+    .find-card > p:not(.eyebrow) { margin-top: 20px; }
+    .find-card ol { padding-left: 16px; }
+    .healing-cat { right: 0; }
+    .guidelines { width: calc(100% - 48px); grid-template-columns: minmax(0, 1fr); gap: 36px; padding: 36px 0 64px; }
+    .guidelines-book-wrap { max-width: 480px; width: 100%; margin: auto; }
+    .guidelines-book { position: relative; top: auto; border-radius: 20px; }
+    .guidelines-list { gap: 36px; }
+    .guide-card { max-width: 480px; }
+    .guide-card .guide-line { right: -14px; width: 44px; }
+    .events { padding: 60px 24px; }
+    .event-heading { margin-bottom: 45px; }
+    .event-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; max-width: 420px; }
+    .event-cat-logo { left: auto; right: -12px; bottom: calc(100% - 16px); width: 90px; height: 80px; }
+    .event-card > span { opacity: 1; inset: auto 0 0; min-height: 64px; padding: 12px; background: rgba(0, 0, 0, 0.6); font-size: 14px; }
+    .event-sprig { width: 100px; height: 90px; right: -30px; }
+    .event-button { margin-top: 36px; }
+    .instagram.section-wrap { padding: 60px 24px; }
+    .instagram .section-heading { margin-bottom: 32px; }
+    .insta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+    .insta-grid a { border-radius: 22px; }
+    .site-footer { min-height: 700px; padding: 48px 24px 250px; }
+    .footer-info { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+    .footer-social { grid-column: 1 / -1; }
+    .footer-column h2 { font-size: 16px; }
+    .footer-column p { font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+    .copyright { margin-top: 30px; font-size: 11px; }
+    
+}
+
+/* 마우스 커서 효과들 */
+/* Shared firefly and spark cursor effect. */
+.firefly{position:fixed;top:0;left:0;width:100px;height:100px;border-radius:50%;pointer-events:none;z-index:9999;opacity:0;transform:translate3d(-200px,-200px,0);background:radial-gradient(circle,rgba(245,255,210,.95) 0%,rgba(188,255,116,.85) 5%,rgba(145,245,105,.45) 19%,rgba(126,218,93,.16) 43%,transparent 72%);filter:blur(3px);mix-blend-mode:screen;will-change:transform}
+.spark{position:fixed;left:0;top:0;width:4px;height:4px;pointer-events:none;z-index:9998;border-radius:50%;background:#d9ff9a;box-shadow:0 0 9px 3px rgba(166,255,105,.65);animation:spark-fade .9s ease-out forwards}
+@keyframes spark-fade{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.firefly,.spark{display:none}}
+
+/* Full footer scene video: crop only the encoded top/bottom black bars. */
+.site-footer { isolation: isolate; }
+.site-footer > .footer-cat {
+    position: absolute;
+    z-index: 0;
+    top: -14.45%;
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    height: 128.9%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    animation: none;
+    transform: none;
+    will-change: auto;
+}
+@media (max-width: 600px) {
+    .site-footer > .footer-cat { object-position: 70% center; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :root {
+        --page-cursor: url("../assets/imges/main/cursor-flower.svg?v=original3") 12 12, auto;
+        --action-cursor: url("../assets/imges/main/cursor-flower-hover.svg?v=outline4") 12 12, pointer;
+    }
+}
