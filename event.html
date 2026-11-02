@@ -35,10 +35,19 @@
       </nav>
     </header>
 
-    <video class="event-banner-video" autoplay muted loop playsinline preload="metadata"
-      aria-label="Page On 이벤트 배너 영상">
-      <source src="assets/imges/viedo/event_banner.mp4" type="video/mp4">
-    </video>
+    <div class="inner_banner">
+      <img src="assets/imges/sub/eventbanner.png" alt="inner_banner">
+
+      <div class="title">
+        <div class="event-banner-title-motion" data-aos="fade-right" data-aos-offset="0" data-aos-once="false"
+          data-aos-duration="1200" data-aos-easing="ease-in-sine">
+          <p>PAGE ON</p>
+          <p>EVENT NEWS</p>
+        </div>
+      </div>
+
+    </div>
+
   </section>
 
   <main class="event-page" aria-label="Page On events">
@@ -55,7 +64,8 @@
           <span>Page On</span>
           <span>EVENT BOOK</span>
         </div>
-        <article class="event-poster" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80" data-aos-once="false">
+        <article class="event-poster" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic"
+          data-aos-offset="80" data-aos-once="false">
           <img class="event-poster-image" src="assets/imges/sub/event1-1.png" alt="Page On 고양이 키링 증정 이벤트">
           <div class="event-copy event-copy-light">
             <p class="event-number">EVENT 1</p>
@@ -79,7 +89,8 @@
           <span>Page On</span>
           <span>EVENT BOOK</span>
         </div>
-        <article class="event-poster event-poster-coffee" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80" data-aos-once="false">
+        <article class="event-poster event-poster-coffee" data-aos="fade-up" data-aos-duration="900"
+          data-aos-easing="ease-out-cubic" data-aos-offset="80" data-aos-once="false">
           <img class="event-poster-image" src="assets/imges/sub/event2-1.png" alt="카페 오픈 기념 음료 또는 쿠키 택 1 무료 이벤트">
           <div class="event-copy event-copy-light">
             <p class="event-number">EVENT 2</p>
@@ -99,7 +110,8 @@
           <span>Page On</span>
           <span>EVENT BOOK</span>
         </div>
-        <article class="event-poster" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80" data-aos-once="false">
+        <article class="event-poster" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic"
+          data-aos-offset="80" data-aos-once="false">
           <img class="event-poster-image" src="assets/imges/sub/event3-1.png" alt="포인트 100P 적립 시 전 메뉴 10% 할인 이벤트">
           <div class="event-copy event-copy-dark">
             <p class="event-number">EVENT 3</p>
@@ -131,20 +143,25 @@
       <section class="footer-column footer-social">
         <h2>FOLLOW US</h2>
         <a href="index.html#instagram">Instagram <img src="assets/imges/main/ins.svg" alt=""></a>
-        <a href="index.html#find-us"><img class="footer-naver-icon" src="assets/imges/main/nav.svg" alt=""> naver</a>
+        <a href="index.html#find-us">naver <img class="footer-naver-icon" src="assets/imges/main/nav.svg" alt=""></a>
       </section>
     </div>
     <p class="copyright">이용약관&nbsp; | &nbsp;개인정보처리방침&nbsp; | &nbsp;Copyright© 2026 PAGE ON. ALL RIGHTS RESERVED.</p>
+
+
+    <video class="footer-cat" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="assets/imges/viedo/cat_walking.mp4?v=footer-scene-20261030" type="video/mp4">
+    </video>
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Replay each poster when its book page re-enters from either direction.
+    // Replay the banner title and posters when their static wrappers re-enter the viewport.
     const eventPosterObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const poster = entry.target.querySelector(".event-poster[data-aos]");
+        const poster = entry.target.querySelector(".event-poster[data-aos], .event-banner-title-motion[data-aos]");
         if (!poster) return;
         const previousTransition = poster.style.transition;
         poster.style.transition = "none";
@@ -155,10 +172,11 @@
       });
     }, { threshold: 0 });
 
-    document.querySelectorAll(".event-book-page").forEach((page) => {
+    document.querySelectorAll(".event-book-page, .inner_banner .title").forEach((page) => {
       eventPosterObserver.observe(page);
     });
   </script>
+  <script src="js/mouse-follower.js?v=firefly4" defer></script>
 </body>
 
 </html>
