@@ -328,3 +328,41 @@ button.signature-menu-button {
     height: 70px;
     object-fit: contain;
 }
+
+
+/* Signature popup: tablet. */
+@media (max-width: 1199px) {
+    .signature-popup { width: 806px; padding: 28px; }
+    .signature-popup-content { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; }
+    .signature-popup-image { width: 100%; height: auto; aspect-ratio: 1; transform: none; }
+    .signature-popup-details { --signature-copy-inset: 0px; padding-top: 0; }
+    .signature-popup-title { font-size: 38px; white-space: normal; }
+    .signature-popup-description { font-size: 16px; min-height: 0; }
+    .signature-popup-thumbnails { gap: 8px; }
+    .signature-popup-thumbnail { flex: 1; min-width: 0; max-width: 128px; width: auto; height: auto; aspect-ratio: 128 / 102; }
+    .signature-popup-cat-icon { position: static; transform: none; width: 56px; height: 56px; }
+}
+
+/* Signature popup: mobile, with internal vertical scrolling. */
+@media (max-width: 600px) {
+    .signature-popup { width: calc(100% - 24px); max-width: none; max-height: calc(100dvh - 24px); padding: 20px; border-radius: 22px; }
+    .signature-popup-close-form { top: 10px; right: 10px; }
+    .signature-popup-header { margin-bottom: 20px; padding-left: 24px; padding-right: 30px; min-height: 36px; }
+    .signature-popup-header p { transform: none; font-size: 11px; letter-spacing: 0.08em; }
+    .signature-popup-header-herb { left: -3px; top: 50%; width: 22px; height: 36px; }
+    .signature-popup-content { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    .signature-popup-image { max-height: 300px; object-fit: cover; }
+    .signature-popup-title { font-size: 34px; margin-bottom: 14px; }
+    .signature-popup-description { margin-bottom: 16px; line-height: 1.6; }
+    .signature-popup-tags { justify-content: flex-start; margin-bottom: 20px; }
+    .signature-popup-price { justify-content: space-between; font-size: 20px; }
+    .signature-popup-pairing { padding-top: 0; margin-top: 14px; min-height: 60px; }
+    .signature-popup-pairing p { font-size: 16px; }
+    .signature-popup-gallery { grid-template-columns: 24px minmax(0, 1fr) 24px; gap: 6px; margin-top: 18px; }
+    .signature-popup-arrow { width: 24px; min-height: 44px; }
+    .signature-popup-thumbnails { gap: 5px; }
+    .signature-popup-thumbnail { border-width: 2px; border-radius: 8px; }
+    .signature-popup-thumbnail img { border-radius: 5px; }
+    .signature-popup-dots { margin-top: 18px; gap: 4px; }
+    .signature-popup-dot { position: relative; width: 32px; height: 32px; border: 10px solid #fffbee; border-radius: 50%; }
+}
