@@ -1,30 +1,58 @@
 .event-sub-hero {
     position: relative;
     width: min(100%, 1920px);
-    aspect-ratio: 1920 / 520;
+    height: auto;
     margin: 0 auto;
-    overflow: hidden;
-    background: #e9e0cc;
+    /* 기존 aspect-ratio는 삭제 */
 }
 
-.event-banner-video {
-    position: absolute;
-    inset: 0;
+.inner_banner {
+    width: 100%;
+}
+
+.inner_banner img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 67%;
+    height: 800px;
 }
 
+.inner_banner {
+    position: relative;
+}
+
+.inner_banner .title {
+    position: absolute;
+    bottom: 36%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #26351F;
+    font-family: "Abhaya Libre", Georgia, serif;
+    font-weight: 800;
+}
+
+.inner_banner .title p {
+    margin: 0;
+}
+
+.inner_banner .title p:first-child {
+    margin-bottom: 12px;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 0.25em;
+}
+
+.inner_banner .title p:last-child {
+    font-size: 110px;
+    line-height: 1;
+    white-space: nowrap;
+}
 .event-page {
     width: 100%;
-    padding: 0 0 80px;
+    padding: 200px;
     background: #FFFBEE;
 }
 
 .event-book-heading {
-    padding: 56px 20px 30px;
     text-align: center;
 }
 
@@ -46,7 +74,7 @@
 }
 
 .event-book-heading p {
-    margin: 12px 0 0;
+    margin: 12px 0 43px;
     color: #8a7453;
     font: 600 14px/1.4 var(--serif);
     letter-spacing: 0.2em;
@@ -221,11 +249,11 @@
 }
 
 .event-poster-coffee .event-period {
-    transform: translateY(8px);
+    transform: translateY(6px);
 }
 
 .event-copy p {
-    margin: 0;
+    margin:-6px;
 }
 
 .event-number {
@@ -286,3 +314,41 @@
 }
 
 
+
+
+/* Event: tablet layout. */
+@media (max-width: 1199px) {
+    .inner_banner img { height: auto; aspect-ratio: 1920 / 800; object-fit: cover; }
+    .inner_banner .title { top: 48%; bottom: auto; left: 7%; }
+    .inner_banner .title p:first-child { font-size: 24px; margin-bottom: 8px; }
+    .inner_banner .title p:last-child { font-size: clamp(44px, 7vw, 80px); }
+    .event-page { padding: 64px 32px 80px; }
+    .event-book { width: calc(100% - 32px); max-width: 850px; }
+    .event-book-page { padding: 24px 24px 20px; }
+}
+
+/* Event: mobile layout. */
+@media (max-width: 600px) {
+    .inner_banner img { min-height: 300px; aspect-ratio: 4 / 3; object-position: center; }
+    .inner_banner .title { top: auto; bottom: 24px; left: 24px; transform: none; padding: 12px; border-radius: 10px; background: rgba(255, 251, 238, 0.8); }
+    .inner_banner .title p:first-child { font-size: 17px; letter-spacing: 0.18em; }
+    .inner_banner .title p:last-child { font-size: clamp(30px, 8vw, 52px); }
+    .event-page { padding: 48px 20px 60px; }
+    .event-book-heading h1 { font-size: 32px; }
+    .event-book-heading p { font-size: 11px; margin-bottom: 28px; }
+    .event-book { width: calc(100% - 14px); padding: 0 4px 4px 20px; margin-left: 0; }
+    .event-book-spine { width: 20px; font-size: 10px; line-height: 20px; padding-top: 20px; letter-spacing: 0.1em; }
+    .event-book-page { padding: 16px 10px 14px; }
+    .event-book-page::before { width: 12px; }
+    .event-page-running-head, .event-page-running-foot { font-size: 10px; gap: 8px; letter-spacing: 0; }
+    .event-page-running-head span:first-child { font-size: 17px; }
+    .event-page-running-foot span:last-child { font-size: 15px; }
+    .event-book-tab { right: -17px; width: 22px; height: 40px; top: 18px; font-size: 12px; }
+    .event-copy { width: 94%; }
+    .event-copy p { margin: 0; }
+    .event-number { font-size: 12px; margin-bottom: 8px !important; }
+    .event-description { font-size: clamp(11px, 2.7vw, 16px); line-height: 1.4; }
+    .event-period { font-size: 10px; margin-top: 6px !important; }
+    .event-greeting { width: 16%; }
+    .event-greeting span { font-size: 12px; }
+}
